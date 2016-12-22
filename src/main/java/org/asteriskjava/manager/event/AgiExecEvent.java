@@ -41,18 +41,8 @@ public class AgiExecEvent extends ManagerEvent
 	private Integer resultCode;
 	private String result;
 	private String accountCode;
-
-	public String getUniqueId()
-	{
-		return uniqueId;
-	}
-
-	public void setUniqueId(String uniqueId)
-	{
-		this.uniqueId = uniqueId;
-	}
-
-	private String uniqueId;
+    private String uniqueId;
+    private String linkedId;
 
 	/**
 	 * Creates a new AgiExecEvent.
@@ -63,6 +53,36 @@ public class AgiExecEvent extends ManagerEvent
 	{
 		super(source);
 	}
+    
+    public String getUniqueId()
+	{
+		return uniqueId;
+	}
+
+	public void setUniqueId(String uniqueId)
+	{
+		this.uniqueId = uniqueId;
+	}
+
+    /**
+     * Returns the uniqueid linked with uniqueid 
+     * 
+     * @return uniqueid linked with uniqueid 
+     */
+    public String getLinkedId() {
+        return linkedId;
+    }
+
+
+    /**
+     * Sets the uniqueid linked with uniqueid 
+     * @param linkedId uniqueid linked with uniqueid 
+     */
+    public void setLinkedId( String linkedId ) {
+        this.linkedId = linkedId;
+    }
+    
+    
 
 	/**
 	 * Returns the name of the channel this event occurred on.

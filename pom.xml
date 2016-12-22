@@ -113,7 +113,7 @@
 			<plugin>
 				<groupId>biz.aQute.bnd</groupId>
 				<artifactId>bnd-maven-plugin</artifactId>
-				<version>3.2.0</version>
+                <version>3.3.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -121,6 +121,13 @@
 						</goals>
 					</execution>
 				</executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                        <version>1.7.21</version>
+                    </dependency>
+                </dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -189,8 +196,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.9</version>
-			<scope>compile</scope>
+            <version>1.7.21</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
